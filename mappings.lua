@@ -30,11 +30,21 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>,"] = { ":nohlsearch<cr>", desc = "Скрыть выделение поиска"},
+    ["<leader>er"] = { "<cmd>lua vim.diagnostic.open_float()<cr>"},
+    ["<leader>wf"] = { "<cmd>:Format<cr>", desc = "Formating"},
+ 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
-  t = {
+  i = {
+    ['jj'] = { "<esc>" }
+  },
+  v = {
+    ['yy'] = { '"+y'}
+  },
+ t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
-  },
+},
 }
